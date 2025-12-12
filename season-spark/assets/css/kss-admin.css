@@ -1,0 +1,23 @@
+/* kss-admin.css - premium minimal admin UI */
+.kss-wrap { max-width: 1180px; margin: 22px auto; background: #fff; padding: 22px; border-radius: 10px; box-shadow: 0 10px 30px rgba(11,22,39,0.05); }
+.kss-title { font-size: 24px; margin: 0 0 6px; font-weight: 600; }
+.kss-sub { color: #6b7280; margin-bottom: 18px; }
+.kss-effects-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 16px; }
+.kss-effect-card { border-radius: 12px; padding: 14px; background: #fff; border: 1px solid rgba(0,0,0,0.06); transition: transform .12s ease, box-shadow .12s ease; }
+.kss-effect-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(12,24,40,0.06); }
+.kss-effect-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.kss-effect-header h3 { margin:0; font-size:16px; }
+.kss-switch { display:inline-block; position:relative; width:46px; height:28px; }
+.kss-switch input { display:none; }
+.kss-slider { position:absolute; inset:0; background:#e6eaf0; border-radius:28px; transition: all .18s ease; }
+.kss-slider:after { content:''; position:absolute; width:20px; height:20px; left:4px; top:4px; background:#fff; border-radius:50%; box-shadow:0 3px 8px rgba(37,44,63,0.12); transition: transform .18s ease; }
+.kss-switch input:checked + .kss-slider { background: linear-gradient(90deg,#4f46e5,#06b6d4); }
+.kss-switch input:checked + .kss-slider:after { transform: translateX(18px); }
+.kss-effect-body { margin-top:8px; display:flex; flex-direction:column; gap:8px; }
+.kss-date, .kss-color, .kss-row input[type="number"] { width:100%; padding:8px 10px; border-radius:8px; border:1px solid #e6e9ef; background:#fbfdff; }
+.kss-row { display:flex; gap:10px; }
+.kss-row label { flex:1; font-size:13px; color:#374151; display:flex; flex-direction:column; gap:6px; }
+.kss-note, .kss-help { font-size:13px; color:#6b7280; margin:0; }
+.kss-effect-card.kss-disabled { opacity:0.6; filter:grayscale(.15); }
+.kss-pro-tips { margin-top:18px; padding:12px; border-left:4px solid #4f46e5; background:#f8fafc; border-radius:6px; }
+.kss-toggle { cursor:pointer; }
