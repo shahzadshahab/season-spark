@@ -1,0 +1,51 @@
+/* kss-public.css - lightweight, non-intrusive */
+.kss-effect { pointer-events: none; user-select: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 99998; }
+
+/* Ensure the internal canvas never captures pointer events (fixes clickable links at high particle speeds) */
+[data-kss-effect] canvas, .kss-effect canvas { pointer-events: none !important; }
+
+/* UI toggle button (fallback) */
+#kss-toggle-motion { background: rgba(0,0,0,0.6); color: white; border: none; padding: 8px 10px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,0.12); cursor: pointer; }
+
+/* Reduced motion state */
+@media (prefers-reduced-motion: reduce) {
+    .kss-effect { display: none !important; }
+}
+body.kss-reduced-motion .kss-effect { display: none !important; }
+
+/* small screen perf: hide heavy effects if density high */
+@media (max-width: 768px) {
+    .kss-effect { opacity: 0.95; }
+}
+
+/* Custom cursor overlay support: when class added to <html>, hide native cursor */
+html.kss-custom-cursor, html.kss-custom-cursor * {
+    cursor: none !important;
+}
+
+/* custom cursor element fallback styling */
+#kss-custom-cursor { transition: transform .06s linear; will-change: transform; width:48px; height:48px; background-size:contain; background-repeat:no-repeat; background-position:center; }
+
+/* Halloween fog overlay (subtle, non-blocking) */
+.kss-halloween-fog { position:fixed; left:0; top:0; width:100%; height:100%; pointer-events:none; z-index:99997; opacity:0.14; mix-blend-mode:multiply; background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); transition:opacity 1s ease-in-out; }
+
+/* Big popup elements (turkey/diya/menorah) */
+.kss-popup-large { position:fixed; pointer-events:none; z-index:99999; left:0; bottom:-40%; transform-origin:center bottom; opacity:0; animation: kss-popup-rise 2s ease forwards; }
+.kss-popup-large.kss-popup-slow { animation-duration: 2.6s; }
+
+@keyframes kss-popup-rise {
+    0% { transform: translateX(0) translateY(30%) scale(0.6); opacity: 0; }
+    10% { opacity: 1; }
+    60% { transform: translateX(0) translateY(-10%) scale(1.05); }
+    100% { transform: translateX(0) translateY(-120%) scale(0.9); opacity: 0; }
+}
+
+/* Egg drop specific subtle shake */
+.kss-egg-drop { animation: kss-egg-drop 2.2s ease forwards; }
+@keyframes kss-egg-drop {
+    0% { transform: translateY(0) scale(0.9); opacity: 0; }
+    10% { opacity: 1; }
+    60% { transform: translateY(220%) rotate(6deg) scale(1); }
+    80% { transform: translateY(240%) rotate(-6deg) scale(0.98); }
+    100% { transform: translateY(260%) rotate(0deg) scale(0.9); opacity: 0; }
+}

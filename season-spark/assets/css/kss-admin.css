@@ -1,0 +1,97 @@
+/* kss-admin.css - premium minimal admin UI */
+.kss-wrap { max-width: 1180px; margin: 22px auto; background: #fff; padding: 22px; border-radius: 10px; box-shadow: 0 10px 30px rgba(11,22,39,0.05); }
+.kss-title { font-size: 24px; margin: 0 0 6px; font-weight: 600; }
+.kss-sub { color: #6b7280; margin-bottom: 18px; }
+.kss-effects-grid { display: grid; grid-template-columns: repeat(2, minmax(320px,1fr)); gap: 24px; }
+.kss-effect-card { border-radius: 12px; padding: 18px; background: #fff; border: 1px solid rgba(15,23,42,0.10); transition: transform .12s ease, box-shadow .12s ease; }
+.kss-effect-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(12,24,40,0.10); }
+.kss-effect-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.kss-effect-header h3 { margin:0; font-size:16px; }
+.kss-switch { display:inline-block; position:relative; width:46px; height:28px; }
+.kss-switch input { display:none; }
+.kss-slider { position:absolute; inset:0; background:#e6eaf0; border-radius:28px; transition: all .18s ease; }
+.kss-slider:after { content:''; position:absolute; width:20px; height:20px; left:4px; top:4px; background:#fff; border-radius:50%; box-shadow:0 3px 8px rgba(37,44,63,0.12); transition: transform .18s ease; }
+.kss-switch input:checked + .kss-slider { background: linear-gradient(90deg,#4f46e5,#06b6d4); }
+.kss-switch input:checked + .kss-slider:after { transform: translateX(18px); }
+.kss-effect-body { margin-top:8px; display:flex; flex-direction:column; gap:8px; }
+.kss-date, .kss-color, .kss-row input[type="number"] { width:100%; padding:8px 10px; border-radius:8px; border:1px solid #e6e9ef; background:#fbfdff; }
+.kss-row { display:flex; gap:10px; }
+.kss-row label { flex:1; font-size:13px; color:#374151; display:flex; flex-direction:column; gap:6px; }
+.kss-note, .kss-help { font-size:13px; color:#6b7280; margin:0; }
+.kss-grid-3 { display:grid; grid-template-columns: 30% 30% 1fr; gap:12px; align-items:center; }
+.kss-grid-3 .kss-grid-label { display:block; font-size:13px; color:#374151; margin-bottom:6px; }
+.kss-grid-3 input[type="number"], .kss-grid-3 .kss-color { width:100%; padding:8px 10px; border-radius:8px; border:1px solid #e6e9ef; background:#fbfdff; }
+.kss-grid-3 .kss-grid-color .kss-color { max-width:160px; }
+.kss-effect-card.kss-disabled { opacity:0.6; filter:grayscale(.15); }
+.kss-pro-tips { margin-top:18px; padding:12px; border-left:4px solid #4f46e5; background:#f8fafc; border-radius:6px; }
+.kss-toggle { cursor:pointer; }
+
+/* Schedule block styling - compact, inline dates, premium glassmorphism */
+.kss-schedule-block {
+	margin-top:8px;
+	padding:10px;
+	border-radius:10px;
+	background: rgba(255,255,255,0.6);
+	border: 1px solid rgba(255,255,255,0.5);
+	box-shadow: 0 6px 18px rgba(9,18,30,0.06);
+	backdrop-filter: blur(6px) saturate(120%);
+}
+.kss-schedule-dates { display:flex; gap:10px; align-items:center; }
+.kss-schedule-dates .kss-date { flex:1; max-width:160px; width:auto; }
+.kss-schedule-help { margin-top:8px; font-size:12px; color:#4b5563; }
+.kss-schedule-switch { display:inline-flex; align-items:center; }
+.kss-schedule-label { font-size:13px; color:#374151; margin-left:8px; }
+
+/* Bottom row layout: schedule left, custom cursor right */
+.kss-row-inline { display:flex; align-items:center; gap:12px; margin-top:10px; justify-content:space-between; }
+.kss-inline-label { display:inline-flex; align-items:center; gap:10px; font-size:13px; color:#374151; }
+.kss-inline-label .kss-switch { width:40px; height:24px; }
+.kss-inline-label .kss-switch .kss-slider:after { width:18px; height:18px; left:3px; top:3px; }
+.kss-inline-spacer { flex:1; }
+
+/* Save button styles (glassmorphism) */
+.kss-save-btn { background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(240,246,255,0.6)); border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 8px 24px rgba(15,23,42,0.06); padding:10px 16px; border-radius:12px; color:#0f172a; font-weight:600; }
+.kss-card-save { padding:6px 10px; border-radius:8px; background:transparent; border:1px solid rgba(15,23,42,0.06); box-shadow: 0 6px 18px rgba(9,20,36,0.04); }
+
+/* Slightly elevate the card when schedule is active for emphasis */
+.kss-effect-card .kss-schedule-block { transition: transform .12s ease, box-shadow .12s ease; }
+.kss-effect-card .kss-schedule-block:where(:not([style*="display:none"])) { transform: translateY(-2px); }
+
+/* Dev tabs */
+.kss-dev-tabs { margin-top: 12px; border-radius: 10px; overflow: hidden; background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(246,247,249,0.6)); border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 8px 30px rgba(9,20,36,0.04); }
+.kss-tabnav { display:flex; gap:8px; padding:12px; background:transparent; }
+.kss-tab { background:transparent; border:0; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; color:#374151; transition: all .18s ease; }
+.kss-tab:hover { transform: translateY(-2px); }
+.kss-tab-active { background: linear-gradient(90deg,#eef2ff,#ecfeff); box-shadow: 0 6px 18px rgba(79,70,229,0.08); color:#0f172a; }
+.kss-tab-content { padding:18px; display:none; animation: kss-fade .18s ease both; }
+.kss-tab-content.kss-tab-active { display:block; }
+.kss-doc-inner { max-width:900px; }
+.kss-tab-content pre { background:#0f172a; color:#e6eef8; padding:12px; border-radius:8px; overflow:auto; }
+
+@keyframes kss-fade { from { opacity:0; transform: translateY(6px); } to { opacity:1; transform:none; } }
+
+/* Header banner */
+.kss-header-banner { display:block; width:100%; height:auto; border-radius:8px; margin-bottom:25px; box-shadow: inset 0 -20px 40px rgba(0,0,0,0.08), 0 8px 20px rgba(9,20,36,0.04); transition: transform .18s ease, opacity .18s ease; }
+.kss-header-banner:hover { transform: translateY(-2px); }
+
+/* Save notice (match WP notice but with subtle glass style) */
+.kss-save-notice.notice-success { background: linear-gradient(180deg, rgba(236,253,245,0.85), rgba(235,255,245,0.7)); border-left: 4px solid #10b981; box-shadow: 0 8px 20px rgba(15,23,42,0.04); }
+.kss-save-notice p { margin: 0; color: #064e3b; font-weight:600; }
+
+/* Row styles for new card layout */
+.kss-row-1 { display:flex; align-items:center; gap:12px; justify-content:space-between; }
+.kss-col-50 { flex:1; }
+.kss-col-right { text-align:right; }
+.kss-switch-right { display:inline-flex; justify-content:flex-end; }
+.kss-effect-title { font-size:16px; margin:0; }
+.kss-row-2 input[type="number"] { padding:8px 10px; border-radius:8px; border:1px solid #e6e9ef; background:#fbfdff; }
+.kss-row-3 .kss-inline-label { display:flex; align-items:center; gap:8px; }
+.kss-row-3 .kss-color { min-width:140px; }
+.kss-row-4 { margin-top:10px; }
+
+/* Responsive: stack to single column on narrow screens */
+@media (max-width: 860px) {
+	.kss-effects-grid { grid-template-columns: 1fr; gap: 18px; }
+	.kss-schedule-dates .kss-date { max-width: 100%; }
+	.kss-header-banner { height:90px; }
+}
