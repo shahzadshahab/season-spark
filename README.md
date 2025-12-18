@@ -1,4 +1,4 @@
-<p><a href="https://creatingbee.com/"><img src="season-spark/assets/images/banner.png" alt="Season Spark Banner" style="border-radius:10px;width:100%;"></a></p>
+<p><a href="https://creatingbee.com/"><img src="season-spark/assets/images/banner.png" alt="Season Spark Banner" style="border-radius:10px !important;width:100%;"></a></p>
 
 
 # ✨ Season Spark
