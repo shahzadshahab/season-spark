@@ -1,5 +1,5 @@
-<!-- Banner: referenced image under assets/images/banner.png -->
-[![image][Season Spark – Snowfall Effect](assets/images/banner.png)]
+![Season Spark Banner](season-spark/assets/images/banner.png)
+
 
 # ✨ Season Spark
 
