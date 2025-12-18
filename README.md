@@ -1,7 +1,7 @@
 <!-- Banner: referenced image under assets/images/banner.png -->
-<p align="center">
-  <img src="assets/images/banner.png" alt="Season Spark banner" style="max-width:860px;width:100%;border-radius:8px;" />
-</p>
+[<p align="center">
+  <img src="[assets/images/banner.png](https://github.com/shahzadshahab/season-spark/blob/main/season-spark/assets/images/banner.png)" alt="Season Spark banner" style="max-width:860px;width:100%;border-radius:8px;" />
+</p>](https://github.com/shahzadshahab/season-spark/blob/main/season-spark/assets/images/banner.png)
 
 # ✨ Season Spark
 
