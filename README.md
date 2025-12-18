@@ -1,5 +1,5 @@
 <!-- Banner: referenced image under assets/images/banner.png -->
-[![Season Spark by Shahzad Shahab](https://github.com/shahzadshahab/season-spark/blob/main/season-spark/assets/images/banner.png)]
+[https://github.com/shahzadshahab/season-spark/blob/main/season-spark/assets/images/banner.png]()
 
 # ✨ Season Spark
 
