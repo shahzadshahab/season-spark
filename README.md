@@ -1,4 +1,4 @@
-![Season Spark Banner](season-spark/assets/images/banner.png)
+<p><img src="season-spark/assets/images/banner.png" alt="Season Spark Banner" style="border-radius:10px;width:100%;"></p>
 
 
 # ✨ Season Spark
